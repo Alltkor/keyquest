@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyQuest — Профиль</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️ </text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <main class="prof">
+
+    <section class="card p-head">
+      <div class="p-av" id="pAv"></div>
+      <div>
+        <h1 id="pName"></h1>
+        <div class="muted" id="pMeta"></div>
+        <div class="xpbar"><div id="pXp"></div></div>
+        <div class="muted small" id="pXpText"></div>
+      </div>
+      <div class="p-side">
+        <div class="streak" id="pStreak"></div>
+        <button class="btn btn-outline" id="editBtn">Редактировать</button>
+      </div>
+    </section>
+
+    <section class="card" id="editCard" hidden>
+      <h2>РЕДАКТИРОВАНИЕ ПРОФИЛЯ</h2>
+      <div class="field" id="f-nick">
+        <label for="nick">Никнейм</label>
+        <input id="nick" maxlength="20">
+        <div class="msg" id="nickMsg"></div>
+      </div>
+      <div class="field">
+        <label>Аватар</label>
+        <div class="avatars" id="avatars"></div>
+      </div>
+      <div class="form-error" id="editErr"></div>
+      <div class="row-btns">
+        <button class="btn btn-primary" id="saveEdit">Сохранить</button>
+        <button class="btn btn-outline" id="cancelEdit">Отмена</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>ВИТРИНА ЗНАЧКОВ</h2>
+      <div class="shelf" id="shelf"></div>
+      <button class="btn btn-outline" id="shelfBtn">Выбрать значки</button>
+
+      <div id="picker" hidden>
+        <p class="muted small" style="margin-top:14px">Выбери до 6 значков: <b id="pickCount">0 / 6</b></p>
+        <div class="pick-grid" id="pickGrid"></div>
+        <div class="form-error" id="pickErr"></div>
+        <div class="row-btns">
+          <button class="btn btn-primary" id="pickSave">Сохранить витрину</button>
+          <button class="btn btn-outline" id="pickCancel">Отмена</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>РЕКОРДЫ И СТАТИСТИКА</h2>
+      <div class="facts-grid" id="facts"></div>
+    </section>
+
+    <section class="card soon-card">
+      <h2>ПРИГЛАСИ ДРУГА <span class="soon">СКОРО</span></h2>
+      <p class="muted">Реферальная программа с бонусами появится позже.</p>
+    </section>
+
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/shell.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

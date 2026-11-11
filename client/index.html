@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyQuest — тренажёр печати с уровнями и достижениями</title>
+  <meta name="description" content="Учись печатать быстрее: уровни, серии дней, достижения и график прогресса.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️ </text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">◆ KeyQuest</a>
+    <nav class="links" aria-label="Разделы">
+      <a href="#features">Возможности</a>
+      <a href="#levels">Уровни</a>
+      <a href="#game">Геймификация</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Сменить тему">◐</button>
+      <a class="btn btn-outline" id="navLogin" href="login.html">Войти</a>
+      <a class="btn btn-primary" id="navStart" href="register.html">Начать</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div>
+      <h1>Печатай быстрее.<br><span class="accent">Играя каждый день.</span></h1>
+      <p class="lead">Тренажёр с уровнями, сериями и достижениями — как фитнес-приложение для твоих пальцев. Короткие тренировки и понятный прогресс.</p>
+      <div class="cta">
+        <a class="btn btn-primary btn-lg" id="heroStart" href="register.html">Начать бесплатно</a>
+        <a class="btn btn-outline btn-lg" id="heroLogin" href="login.html">Войти</a>
+      </div>
+      <ul class="facts">
+        <li>7 уровней</li>
+        <li>14 достижений</li>
+        <li>График прогресса</li>
+      </ul>
+    </div>
+
+    <div class="card demo" aria-hidden="true">
+      <div class="demo-top">
+        <span class="muted">Уровень 1 · Домашний ряд</span>
+        <span class="chip-wpm">66 WPM</span>
+      </div>
+      <div class="demo-text" id="demoText"></div>
+      <div class="demo-bar"><div id="demoBar"></div></div>
+      <div class="kb" id="kb"></div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="features">
+    <h2>Всё, чтобы печатать каждый день</h2>
+    <p class="sub">Без лишнего: открыл, потренировался пару минут, увидел рост.</p>
+    <div class="cards4">
+      <div class="card feat">
+        <div class="ic">🎚️ </div>
+        <h3>Учись в своём темпе</h3>
+        <p>Уровни от домашнего ряда до кода. Следующий открывается, когда пройден предыдущий.</p>
+      </div>
+      <div class="card feat">
+        <div class="ic">🤝 </div>
+        <h3>Соревнуйся с друзьями</h3>
+        <p>Недельные рейтинги и дуэли на скорость — уже в разработке.</p>
+      </div>
+      <div class="card feat">
+        <div class="ic">📈 </div>
+        <h3>Следи за прогрессом</h3>
+        <p>Скорость, точность и график по дням на личной странице.</p>
+      </div>
+      <div class="card feat">
+        <div class="ic">🏅 </div>
+        <h3>Зарабатывай достижения</h3>
+        <p>14 значков за скорость, точность и серии дней подряд.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="levels">
+    <h2>От новичка до мастера</h2>
+    <p class="sub">Семь уровней: каждый со своей целью по скорости и наградой XP.</p>
+    <div class="path-wrap">
+      <div class="path">
+        <div class="lv done"><div class="c">✓</div><b>Домашний ряд</b><small>цель 20 WPM</small></div>
+        <div class="lv done"><div class="c">✓</div><b>Все буквы</b><small>цель 25 WPM</small></div>
+        <div class="lv now"><div class="c">3</div><b>Слова</b><small>цель 30 WPM</small></div>
+        <div class="lv"><div class="c">4</div><b>Цифры и знаки</b><small>цель 25 WPM</small></div>
+        <div class="lv"><div class="c">5</div><b>Тексты</b><small>цель 35 WPM</small></div>
+        <div class="lv"><div class="c">6</div><b>Код</b><small>цель 30 WPM</small></div>
+        <div class="lv"><div class="c">7</div><b>Спринт</b><small>цель 45 WPM</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="game">
+    <h2>Игра, от которой не хочется отрываться</h2>
+    <p class="sub">XP, уровни аккаунта, серия дней и значки. Примеры ниже.</p>
+    <div class="cards3">
+      <div class="card">
+        <h3>Соревнуйся с другими</h3>
+        <p>Недельный рейтинг игроков по XP и скорости. Дуэли с друзьями — скоро.</p>
+        <div class="lb"><span class="pos g">1</span>Nika<span class="sc">94 WPM</span></div>
+        <div class="lb"><span class="pos s">2</span>Dron<span class="sc">91 WPM</span></div>
+        <div class="lb"><span class="pos b">3</span>Mira<span class="sc">88 WPM</span></div>
+        <div class="lb me"><span class="pos m">4</span>Ты<span class="sc">62 WPM</span></div>
+      </div>
+      <div class="card">
+        <h3>ВИТРИНА ЗНАЧКОВ</h3>
+        <div class="badges">
+          <div class="bd">👣 </div><div class="bd">⚡ </div><div class="bd">🎯 </div>
+          <div class="bd">👑 </div><div class="bd off">🔥 </div><div class="bd off">🗺️ </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>СЕРИЯ ДНЕЙ</h3>
+        <div class="streak-n"><i>🔥 </i><span>12</span></div>
+        <div class="muted">дней подряд — не потеряй огонёк</div>
+        <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ВАЖНО: это примеры-заглушки. Перед публикацией замени на реальные отзывы или убери блок. -->
+  <section class="section wrap" id="reviews">
+    <h2>Что говорят игроки</h2>
+    <p class="sub">Здесь будут отзывы тех, кто уже тренируется.</p>
+    <div class="cards3 rev">
+      <div class="card"><p>«Уровни не дают бросить: хочется открыть следующий.»</p><div class="who"><i style="background:var(--violet)"></i>Артём</div></div>
+      <div class="card"><p>«Серия дней мотивирует заходить хотя бы на пять минут.»</p><div class="who"><i style="background:var(--teal)"></i>Лена</div></div>
+      <div class="card"><p>«График наглядно показывает, что скорость растёт.»</p><div class="who"><i style="background:var(--warning)"></i>Влад</div></div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="faq">
+    <h2>Частые вопросы</h2>
+    <p class="sub"></p>
+    <div class="faq">
+      <details open><summary>Это бесплатно?</summary><p>Да, регистрация и все уровни сейчас бесплатны.</p></details>
+      <details><summary>Какие раскладки поддерживаются?</summary><p>Пока тексты на английском (QWERTY). Русская раскладка и свои тексты — в планах.</p></details>
+      <details><summary>Как работает серия (streak)?</summary><p>День засчитывается, если ты завершил хотя бы одну тренировку. Пропустил день — серия начинается заново.</p></details>
+      <details><summary>Где хранится мой прогресс?</summary><p>В твоём аккаунте на сервере: можно зайти с любого устройства. Без регистрации можно тренироваться, но прогресс сохранится только в этом браузере.</p></details>
+      <details><summary>Как считается скорость?</summary><p>В WPM: слово условно равно 5 символам. Учитываются только верно набранные символы.</p></details>
+    </div>
+  </section>
+
+  <section class="final">
+    <h2>Готов попробовать?</h2>
+    <a class="btn btn-primary btn-lg" id="finalStart" href="register.html">Начать бесплатно</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>◆ KeyQuest · учебный проект</span>
+    <span>Сделано с помощью HTML, CSS, JS, Node.js и PostgreSQL</span>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>

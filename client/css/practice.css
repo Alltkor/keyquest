@@ -1,0 +1,14 @@
+.pr { max-width: 720px; margin: 0 auto; padding: var(--space-5) 16px 60px; display: grid; gap: var(--space-4); }
+.pr h2 { font-size: 13px; letter-spacing: .06em; color: var(--teal); margin-bottom: var(--space-3); }
+.small { font-size: 13px; }
+.pr .row { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: var(--space-4); }
+.pr .lbl b { display: block; }
+.pr .lbl small { color: var(--muted); font-size: 13px; }
+.pr select { background: var(--surface-2); color: var(--text); border: 1px solid var(--border);
+  border-radius: var(--radius-field); padding: 8px 10px; font: inherit; }
+.pr textarea { width: 100%; margin-top: var(--space-3); padding: 12px 14px; resize: vertical;
+  background: var(--surface-2); color: var(--text); border: 1px solid var(--border);
+  border-radius: var(--radius-field); font: 400 15px var(--font-mono); }
+.pr textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(25, 240, 210, .15); }
+.pr .foot { display: flex; justify-content: space-between; align-items: center; margin-top: var(--space-3); }
+.pr .btn:disabled { opacity: .5; }

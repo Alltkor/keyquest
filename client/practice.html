@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyQuest — Свободная практика</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️ </text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/practice.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <main class="pr">
+    <h1>Свободная практика</h1>
+
+    <section class="card">
+      <h2>СЛУЧАЙНЫЙ ТЕКСТ</h2>
+      <div class="row">
+        <div class="lbl"><b>Язык текстов</b><small>Раскладка клавиатуры, на которой ты печатаешь</small></div>
+        <select id="lang">
+          <option value="en">English (QWERTY)</option>
+          <option value="ru">Русский (ЙЦУКЕН)</option>
+        </select>
+      </div>
+      <a class="btn btn-primary" href="train.html">Начать тренировку</a>
+    </section>
+
+    <section class="card">
+      <h2>СВОЙ ТЕКСТ</h2>
+      <p class="muted small">Вставь любой текст (до 400 символов): статью, код, конспект. За свой текст XP не начисляется и в рейтинг он не идёт.</p>
+      <textarea id="custom" rows="6" maxlength="400" placeholder="Вставь сюда текст…"></textarea>
+      <div class="foot">
+        <span class="muted small" id="count">0 / 400</span>
+        <button class="btn btn-primary" id="go" disabled>Печатать свой текст</button>
+      </div>
+    </section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/shell.js"></script>
+  <script src="js/practice.js"></script>
+</body>
+</html>

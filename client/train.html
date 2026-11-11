@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyQuest — Тренировка</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️ </text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/train.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <main style="max-width: 900px; margin: 32px auto; padding: 0 16px;">
+
+    <div id="userbar" class="userbar"></div>
+
+    <div class="hud">
+      <div class="chip"><small>WPM</small><strong id="wpm">0</strong></div>
+      <div class="chip"><small>ТОЧНОСТЬ</small><strong id="acc">100%</strong></div>
+      <div class="chip"><small>ВРЕМЯ</small><strong id="time">0:00</strong></div>
+      <div class="chip lvl" id="chipLevel"><small>УРОВЕНЬ</small><strong id="lvl">—</strong></div>
+      <div class="spacer"></div>
+      <button class="btn btn-outline" id="restart">Заново</button>
+      <button class="btn btn-outline" id="pauseBtn">❚❚ Пауза <kbd>Esc</kbd></button>
+    </div>
+
+    <div class="card" id="game">
+      <div class="level-label" id="levelinfo"></div>
+      <div class="typing-area" id="text"></div>
+
+      <div class="prog-row">
+        <span id="progText">Прогресс задания 0%</span>
+        <span class="reward" id="reward"></span>
+      </div>
+      <div class="progress"><div id="bar"></div></div>
+
+      <div class="kb" id="kb"></div>
+      <div class="kb-note"><button class="link-btn" id="kbToggle"></button></div>
+      <div class="hint warn" id="layoutHint" hidden></div>
+      <div class="hint" id="touchHint" hidden>Нажми на текст, чтобы открыть клавиатуру</div>
+
+      <input id="mobileInput" class="sr-input" type="text" autocomplete="off" autocapitalize="off"
+             autocorrect="off" spellcheck="false" aria-label="Поле для печати">
+
+      <div class="pause-overlay" id="pause" hidden>
+        <h2>Пауза</h2>
+        <p class="muted">Таймер остановлен. Если выйти, прогресс этого задания не сохранится.</p>
+        <div class="actions">
+          <button class="btn btn-primary" id="resume">Продолжить</button>
+          <a class="btn btn-outline" id="exitLink" href="levels.html">Выйти</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card result hidden" id="result">
+      <div class="confetti" id="confetti"></div>
+      <h2 id="r-title">Уровень пройден!</h2>
+      <div class="stars" id="r-stars"></div>
+
+      <div class="stats">
+        <div class="chip"><small>WPM</small><strong id="r-wpm"></strong></div>
+        <div class="chip"><small>ТОЧНОСТЬ</small><strong id="r-acc"></strong></div>
+        <div class="chip"><small>ВРЕМЯ</small><strong id="r-time"></strong></div>
+      </div>
+
+      <div class="record" id="r-record"></div>
+      <div class="mistake" id="r-mistake"></div>
+
+      <div class="xp-row">
+        <span id="r-xp" class="xp-gain"></span>
+        <span id="r-level" class="muted"></span>
+      </div>
+      <div class="progress violet"><div id="r-bar"></div></div>
+
+      <div class="quest-new" id="r-quest"></div>
+      <div class="ach-new" id="r-ach"></div>
+
+      <div class="actions">
+        <button class="btn btn-outline" id="again">Повторить</button>
+        <button class="btn btn-primary" id="next">Следующий текст</button>
+        <button class="btn btn-outline" id="share">Поделиться</button>
+      </div>
+    </div>
+
+  </main>
+  <script src="js/engine.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/train.js"></script>
+</body>
+</html>

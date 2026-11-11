@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyQuest — Настройки</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️ </text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/settings.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <main class="set">
+    <h1>Настройки</h1>
+
+    <section class="card">
+      <h2>ВНЕШНИЙ ВИД</h2>
+      <div class="setrow">
+        <div class="lbl"><b>Светлая тема</b><small>По умолчанию тёмная</small></div>
+        <label class="sw"><input type="checkbox" id="sw-theme"><span></span></label>
+      </div>
+      <div class="setrow">
+        <div class="lbl"><b>Уменьшить движение</b><small>Отключает анимации и конфетти</small></div>
+        <label class="sw"><input type="checkbox" id="sw-motion"><span></span></label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>ТРЕНИРОВКА</h2>
+      <div class="setrow">
+        <div class="lbl"><b>Экранная клавиатура</b><small>Подсвечивает следующую клавишу</small></div>
+        <label class="sw"><input type="checkbox" id="sw-kb"><span></span></label>
+      </div>
+      <div class="setrow">
+        <div class="lbl"><b>Звуки печати</b><small>Короткие щелчки при нажатии</small></div>
+        <div class="ctrl">
+          <button class="btn btn-outline" id="soundTest">Проверить</button>
+          <label class="sw"><input type="checkbox" id="sw-sound"><span></span></label>
+        </div>
+      </div>
+      <div class="setrow">
+        <div class="lbl"><b>Язык текстов</b><small>English (QWERTY) или Русский (ЙЦУКЕН)</small></div>
+        <select id="sel-lang">
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+        </select>
+      </div>
+      <div class="setrow off">
+        <div class="lbl"><b>Сложность</b><small>Скоро</small></div>
+        <select disabled><option>Обычная</option></select>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>ПРИВАТНОСТЬ</h2>
+      <div class="setrow">
+        <div class="lbl"><b>Показывать меня в рейтинге</b><small>Если выключить, тебя не будет в списках</small></div>
+        <label class="sw"><input type="checkbox" id="sw-lb" checked><span></span></label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>АККАУНТ</h2>
+      <div class="setrow">
+        <div class="lbl"><b>Никнейм и аватар</b><small>Меняются в профиле</small></div>
+        <a class="btn btn-outline" href="profile.html">Изменить</a>
+      </div>
+      <div class="setrow off">
+        <div class="lbl"><b>Привязка аккаунтов</b><small>Вход через Google — скоро</small></div>
+        <button class="btn btn-outline" disabled>Привязать</button>
+      </div>
+      <div class="setrow">
+        <div class="lbl"><b>Выйти из аккаунта</b></div>
+        <button class="btn btn-outline" id="logout">Выйти</button>
+      </div>
+    </section>
+
+    <div class="status" id="status" role="status"></div>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/shell.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

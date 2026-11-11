@@ -1,0 +1,25 @@
+.auth-wrap { min-height: 100vh; display: grid; place-items: center; padding: 16px; }
+.auth-card { width: 100%; max-width: 400px; }
+.auth-card h1 { margin-bottom: 4px; }
+.field { margin-top: var(--space-4); }
+.field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.field input {
+  width: 100%; padding: 11px 14px; font: 400 15px var(--font-ui);
+  background: var(--surface-2); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius-field);
+}
+.field input:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(25,240,210,.15); }
+.field.error input { border-color: var(--danger); }
+.field .msg { color: var(--danger); font-size: 12px; margin-top: 6px; min-height: 0; }
+.form-error { color: var(--danger); margin-top: var(--space-4); font-size: 14px; }
+.auth-card .btn { width: 100%; margin-top: var(--space-5); }
+.auth-card .btn.loading { opacity: .7; pointer-events: none; }
+.switch { text-align: center; margin-top: var(--space-4); color: var(--muted); font-size: 14px; }
+.switch a { color: var(--teal); }
+
+.avatars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.avatars label { cursor: pointer; }
+.avatars input { position: absolute; opacity: 0; }
+.av { display: block; aspect-ratio: 1; border-radius: 50%; border: 3px solid transparent; }
+.avatars input:checked + .av { border-color: var(--text); box-shadow: var(--glow); }
+.avatars input:focus-visible + .av { outline: 2px solid var(--violet); outline-offset: 2px; }

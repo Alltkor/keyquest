@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyQuest — Регистрация</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <div class="auth-wrap">
+    <form class="card auth-card" id="form" novalidate>
+      <h1>Создай аккаунт</h1>
+      <p class="muted">Выбери аватар и ник — и в бой</p>
+
+      <div class="field">
+        <label>Аватар</label>
+        <div class="avatars" id="avatars"></div>
+      </div>
+
+      <div class="field" id="f-nickname">
+        <label for="nickname">Никнейм</label>
+        <input id="nickname" autocomplete="nickname">
+        <div class="msg"></div>
+      </div>
+      <div class="field" id="f-email">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email">
+        <div class="msg"></div>
+      </div>
+      <div class="field" id="f-password">
+        <label for="password">Пароль (от 8 символов)</label>
+        <input id="password" type="password" autocomplete="new-password">
+        <div class="msg"></div>
+      </div>
+
+      <div class="form-error" id="form-error"></div>
+      <button class="btn btn-primary" id="submit" type="submit">Создать аккаунт</button>
+      <p class="switch">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+    </form>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

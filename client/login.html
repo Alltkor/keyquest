@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyQuest — Вход</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <div class="auth-wrap">
+    <form class="card auth-card" id="form" novalidate>
+      <h1>С возвращением</h1>
+      <p class="muted">Войди, чтобы продолжить серию</p>
+
+      <div class="field" id="f-email">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email">
+        <div class="msg"></div>
+      </div>
+      <div class="field" id="f-password">
+        <label for="password">Пароль</label>
+        <input id="password" type="password" autocomplete="current-password">
+        <div class="msg"></div>
+      </div>
+
+      <div class="form-error" id="form-error"></div>
+      <button class="btn btn-primary" id="submit" type="submit">Войти</button>
+      <p class="switch">Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
+    </form>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

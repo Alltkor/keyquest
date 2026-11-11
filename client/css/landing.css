@@ -1,0 +1,132 @@
+html { scroll-padding-top: 76px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.accent { color: var(--teal); }
+.muted { color: var(--muted); }
+.section { padding: 72px 20px; }
+.section > h2, .section-head h2 { font-size: clamp(26px, 4vw, 36px); text-align: center; margin-bottom: 8px; }
+.section .sub { text-align: center; color: var(--muted); margin-bottom: 40px; }
+.btn-lg { padding: 14px 30px; font-size: 16px; }
+
+/* Навигация */
+.nav { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(10px); }
+.nav-in { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+.logo { font-weight: 700; font-size: 18px; color: var(--teal); text-decoration: none; }
+.links { display: flex; gap: 24px; }
+.links a { color: var(--muted); text-decoration: none; font-size: 15px; }
+.links a:hover { color: var(--text); }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-actions .btn { padding: 8px 18px; font-size: 14px; }
+.icon-btn { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); cursor: pointer; font-size: 16px; }
+.icon-btn:hover { border-color: var(--teal); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; padding: 72px 20px 56px; }
+.hero h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1.1; letter-spacing: -0.02em; }
+.lead { color: var(--muted); font-size: 18px; margin: 20px 0 28px; max-width: 480px; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.facts { list-style: none; padding: 0; margin: 28px 0 0; display: flex; gap: 20px; flex-wrap: wrap; color: var(--muted); font-size: 14px; }
+.facts li::before { content: "✓ "; color: var(--teal); font-weight: 700; }
+
+.demo { padding: 22px; }
+.demo-top { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-bottom: 18px; }
+.chip-wpm { border: 1px solid var(--teal); color: var(--teal); border-radius: 999px; padding: 3px 12px; font: 700 12px var(--font-mono); }
+.demo-text { font: 400 22px/1.6 var(--font-mono); min-height: 72px; word-break: break-word; }
+.t-done { color: var(--teal); }
+.t-rest { color: var(--muted); }
+.cur { display: inline-block; width: 2px; height: 1.1em; background: var(--teal); vertical-align: text-bottom; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.demo-bar { height: 5px; background: var(--surface-2); border-radius: 3px; margin: 14px 0 20px; }
+.demo-bar > div { height: 100%; width: 0; background: var(--teal); border-radius: 3px; transition: width .15s linear; }
+
+.kb { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.kb-row { display: flex; gap: 6px; }
+.kb-row:nth-child(2) { margin-left: 18px; }
+.kb-row:nth-child(3) { margin-left: 36px; }
+.key { width: 30px; height: 32px; border-radius: 7px; display: grid; place-items: center;
+  background: var(--surface-2); border: 1px solid var(--border);
+  font: 500 12px var(--font-mono); color: var(--muted); text-transform: uppercase;
+  transition: background .08s, box-shadow .08s, color .08s; }
+.key.space { width: 210px; }
+.key.hit { background: var(--teal); border-color: var(--teal); color: var(--on-accent); box-shadow: 0 0 16px rgba(25, 240, 210, .55); }
+
+/* Карточки */
+.cards4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.feat { position: relative; transition: transform .2s, border-color .2s; }
+.feat:hover { transform: translateY(-4px); border-color: var(--teal); }
+.feat .ic { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 22px; background: var(--surface-2); border: 1px solid var(--violet); margin-bottom: 14px; }
+.feat h3 { font-size: 17px; margin-bottom: 6px; }
+.feat p { color: var(--muted); font-size: 14px; }
+.soon { position: absolute; top: 14px; right: 14px; font-size: 10px; letter-spacing: .08em;
+  padding: 3px 8px; border-radius: 999px; background: var(--surface-2); color: var(--violet); border: 1px solid var(--violet); }
+
+/* Путь по уровням */
+.path-wrap { overflow-x: auto; padding-bottom: 12px; }
+.path { display: flex; justify-content: space-between; min-width: 720px; position: relative; padding: 10px 0; }
+.path::before { content: ""; position: absolute; left: 6%; right: 6%; top: 40px; height: 3px; background: var(--border); }
+.lv { position: relative; text-align: center; width: 100px; }
+.lv .c { width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px; display: grid; place-items: center;
+  font: 700 20px var(--font-mono); background: var(--surface-2); border: 3px solid var(--border); color: var(--muted); }
+.lv.done .c { background: var(--teal); border-color: var(--teal); color: var(--on-accent); }
+.lv.now .c { background: var(--violet); border-color: var(--violet); color: var(--on-accent); box-shadow: 0 0 0 6px rgba(167, 139, 250, .25); }
+.lv b { display: block; font-size: 13px; }
+.lv small { color: var(--muted); font-size: 12px; }
+
+/* Геймификация */
+.cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.cards3 h3 { color: var(--teal); font-size: 12px; letter-spacing: .08em; margin-bottom: 14px; }
+.cards3 .tagx { float: right; font-size: 10px; color: var(--muted); letter-spacing: .06em; }
+.lb { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; margin-bottom: 6px; font-size: 14px; }
+.lb.me { background: var(--surface-2); border: 1px solid var(--teal); }
+.lb .pos { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 700 11px var(--font-mono); color: #0B0F17; }
+.lb .pos.g { background: #FBBF24; } .lb .pos.s { background: #C0C7D4; } .lb .pos.b { background: #D08A5A; } .lb .pos.m { background: var(--teal); }
+.lb .sc { margin-left: auto; font: 500 13px var(--font-mono); color: var(--muted); }
+.badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.bd { aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; font-size: 28px;
+  background: var(--surface-2); border: 2px solid var(--violet); }
+.bd.off { filter: grayscale(1); opacity: .35; border-color: var(--border); }
+.streak-n { display: flex; align-items: center; gap: 12px; margin: 6px 0 4px; }
+.streak-n span { font: 700 48px var(--font-mono); }
+.streak-n i { font-size: 40px; font-style: normal; }
+.dots { display: flex; gap: 8px; margin-top: 16px; }
+.dots i { width: 22px; height: 22px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--border); }
+.dots i.on { background: var(--warning); border-color: var(--warning); }
+
+/* Отзывы */
+.cards3.rev .card p { color: var(--muted); font-size: 15px; margin-bottom: 14px; }
+.who { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
+.who i { width: 32px; height: 32px; border-radius: 50%; display: block; }
+
+/* FAQ */
+.faq { max-width: 720px; margin: 0 auto; }
+.faq details { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; }
+.faq summary { cursor: pointer; padding: 16px 20px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--teal); font-size: 20px; line-height: 1; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 20px 16px; color: var(--muted); }
+
+/* Финальный призыв и футер */
+.final { text-align: center; padding: 72px 20px; }
+.final h2 { font-size: clamp(26px, 4vw, 38px); margin-bottom: 20px; }
+.foot { border-top: 1px solid var(--border); padding: 28px 20px; color: var(--muted); font-size: 14px; }
+.foot-in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding-top: 40px; }
+  .cards4 { grid-template-columns: repeat(2, 1fr); }
+  .cards3 { grid-template-columns: 1fr; }
+  .links { display: none; }
+}
+@media (max-width: 520px) {
+  .cards4 { grid-template-columns: 1fr; }
+  .key { width: 24px; height: 28px; }
+  .key.space { width: 150px; }
+  .kb-row:nth-child(2) { margin-left: 12px; } .kb-row:nth-child(3) { margin-left: 26px; }
+  .demo-text { font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .cur { animation: none; } }

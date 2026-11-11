@@ -1,0 +1,73 @@
+.dash { max-width: 1000px; margin: 0 auto; padding: var(--space-5) 16px 60px; }
+
+.dash-head { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+.dash-head .grow { flex: 1; min-width: 200px; }
+.dash-head h1 { font-size: 26px; }
+.avatar { width: 52px; height: 52px; border-radius: 50%; flex: none; }
+.streak { display: flex; align-items: center; gap: 6px; padding: 8px 14px;
+  background: var(--surface-2); border: 1px solid var(--warning); border-radius: 999px;
+  color: var(--warning); font-weight: 700; }
+.nav { display: flex; gap: 8px; }
+
+.xpbar { height: 6px; background: var(--surface-2); border-radius: 3px; margin: var(--space-4) 0 var(--space-5); }
+.xpbar > div { height: 100%; background: var(--violet); border-radius: 3px; width: 0; transition: width .6s ease-out; }
+
+.grid { display: grid; gap: var(--space-4); }
+.stats { grid-template-columns: repeat(4, 1fr); margin-bottom: var(--space-4); }
+.stat { padding: var(--space-4); }
+.stat small { color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+.stat strong { display: block; font: 700 28px var(--font-mono); margin-top: 4px; }
+.stat.teal strong { color: var(--teal); }
+.stat.violet strong { color: var(--violet); }
+
+.main-row { grid-template-columns: 2fr 1fr; margin-bottom: var(--space-4); }
+.card h2 { font-size: 13px; letter-spacing: .06em; color: var(--teal); margin-bottom: var(--space-3); }
+.chart-box { position: relative; height: 240px; }
+.empty { color: var(--muted); text-align: center; padding: 60px 0; }
+
+.ring { --p: 0; width: 120px; height: 120px; border-radius: 50%; margin: 8px auto 12px;
+  background: conic-gradient(var(--teal) calc(var(--p) * 1%), var(--surface-2) 0);
+  display: grid; place-items: center; }
+.ring div { width: 92px; height: 92px; border-radius: 50%; background: var(--surface);
+  display: grid; place-items: center; font: 700 22px var(--font-mono); }
+.goal-text { text-align: center; color: var(--muted); font-size: 14px; }
+
+.bottom-row { grid-template-columns: 1fr 1fr; }
+.week { display: flex; justify-content: space-between; }
+.day { text-align: center; font-size: 12px; color: var(--muted); }
+.day i { display: block; width: 28px; height: 28px; border-radius: 50%; margin: 0 auto 6px;
+  background: var(--surface-2); border: 1px solid var(--border); }
+.day.on i { background: var(--warning); border-color: var(--warning); }
+
+.recent { list-style: none; padding: 0; margin: 0; }
+.recent li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.recent li:last-child { border: 0; }
+.recent .mono { color: var(--teal); }
+.recent .xp { color: var(--violet); }
+
+@media (max-width: 800px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .main-row, .bottom-row { grid-template-columns: 1fr; }
+}
+
+.quests { margin-bottom: var(--space-4); }
+.qlist { display: grid; gap: 14px; }
+.q { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; align-items: center; }
+.q .t { font-weight: 600; }
+.q .r { color: var(--violet); font: 700 13px var(--font-mono); }
+.q .bar { grid-column: 1 / -1; height: 6px; background: var(--surface-2); border-radius: 3px; }
+.q .bar > div { height: 100%; background: var(--teal); border-radius: 3px; transition: width .6s ease-out; }
+.q .n { grid-column: 1 / -1; color: var(--muted); font-size: 12px; }
+.q.done .t { color: var(--success); }
+.q.done .bar > div { background: var(--success); }
+.chest { margin-top: 16px; padding: 10px 14px; border: 1px dashed var(--violet); border-radius: 12px;
+  display: flex; justify-content: space-between; color: var(--muted); font-size: 14px; }
+.chest.done { border-style: solid; border-color: var(--warning); color: var(--warning); }
+
+.cta-card { display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  border-color: var(--teal); text-decoration: none; margin-bottom: var(--space-4); color: var(--text); }
+.cta-card b { font-size: 17px; }
+.cta-card:hover { box-shadow: 0 0 24px rgba(25, 240, 210, .2); }
+.week-card { margin-top: var(--space-4); }
+.empty.small { padding: 16px 0; font-size: 14px; }
+.recent .ico { margin-right: 8px; }
